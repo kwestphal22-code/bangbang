@@ -4,25 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rockville Repair</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#111; color:#fff; }
-    header { background:#000; padding:20px; text-align:center; }
-    header h1 { margin:0; }
-    nav { margin-top:10px; }
-    nav a { color:#fff; margin:0 15px; text-decoration:none; }
-    .hero { padding:80px 20px; text-align:center; background:#222; }
-    .hero h2 { font-size:40px; }
-    .btn { display:inline-block; margin:10px; padding:12px 20px; background:#c62828; color:#fff; text-decoration:none; border-radius:5px; }
-    .section { padding:40px 20px; max-width:1000px; margin:auto; }
-    .services { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; }
-    .card { background:#1c1c1c; padding:20px; border-radius:10px; }
-    footer { background:#000; text-align:center; padding:20px; margin-top:40px; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:'Roboto', sans-serif; background:#0d0d0d; color:#fff; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background:#000; position:sticky; top:0; }
+    .logo img { height:60px; }
+    nav a { color:#fff; margin-left:20px; text-decoration:none; }
+
+    .hero { height:90vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
+      background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2');
+      background-size:cover; }
+    .hero h2 { font-size:48px; }
+    .btn { padding:14px 28px; background:#c62828; color:#fff; text-decoration:none; border-radius:6px; margin:10px; }
+
+    .section { padding:60px 40px; max-width:1100px; margin:auto; }
+    .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; }
+    .card { background:#1a1a1a; padding:25px; border-radius:12px; border:1px solid #333; }
+
+    .contact-container { display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+    input, textarea { width:100%; padding:12px; margin-bottom:10px; background:#222; color:#fff; border:none; }
+    iframe { width:100%; height:300px; border:none; }
+
+    footer { background:#000; text-align:center; padding:20px; }
+
+    @media(max-width:800px){ .contact-container { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Rockville Repair</h1>
+  <div class="logo">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAIAAABEtEjdAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAB9KADAAQAAAABAAAB9AAAAAB3bs6AAABAAElEQVR4AezdB7SnR1k/8L1b7u6mh5AESNvdhAAh9E5CSAArTRQRFRENdj02VGzH/1Esx34sR0VEUUGxoihIx0hJqAkpEJLsBtJ7z7Zb/p95v787+9vfvb+79269+8vMuTv7vM8888wzz8x8Z955531/Y9PT08taaB5oHmgeaB4YLQ8sH63qtNo0DzQPNA80DxQPNHBv/aB5oHmgeWAEPdDAfQQbtVWpeaB5oHmggXvrA80DzQPNAyPogQbuI9iorUrNA80DzQMN3FsfaB5oHmgeGEEPNHAfwUZtVWoeaB5oHmjg3vpA80DzQPPACHqggfsINmqrUvNA80DzQAP31geaB5oHmgdG0AMN3EewUVuVmgeaB5oHGri3PtA80DzQPDCCHmjgPoKN2qrUPNA80DzQwL31geaB5oHmgRH0QAP3EWzUVqXmgeaB5oEG7q0PNA80DzQPjKAHGriPYKO2KjUPNA80DzRwb32geaB5oHlgBD3QwH0EG7VVqXmgeaB5oIF76wPNA80DzQMj6IEG7iPYqK1KzQPNA80DDdxbH2geaB5oHhhBDzRwH8FGbVVqHmgeaB5o4N76QPNA80DzwAh6oIH7CDZqq1LzQPNA80AD99YHmgeaB5oHRtADDdxHsFFblZoHmgeaBxq4tz7QPNA80Dwwgh5o4D6Cjdqq1DzQPNA80MC99YHmgeaB5oER9EAD9xFs1Fal5oHmgeaBBu6tDzQPNA80D4ygBxq4j2Cjtio1DzQPNA80cG99oHmgeaB5YAQ90MB9BBu1Val5oHmgeaCBe+sDzQPNA80DI+iBBu4j2KitSs0DzQPN" alt="logo">
+  </div>
   <nav>
     <a href="#">Home</a>
     <a href="#services">Services</a>
@@ -31,59 +45,58 @@
 </header>
 
 <section class="hero">
-  <h2>Reliable Diesel Repair You Can Trust</h2>
+  <h2>Elite Diesel Repair. Done Right.</h2>
   <a href="tel:5554179823" class="btn">Call Now</a>
   <a href="#contact" class="btn">Schedule Service</a>
 </section>
 
 <section class="section">
   <h2>Quick Info</h2>
-  <p>📍 1553 15th Ave SE, Dyersville, Iowa</p>
-  <p>📞 (555) 417-9823</p>
-  <p>🕒 Mon–Fri: 8 AM – 6 PM</p>
+  <p>1553 15th Ave SE, Dyersville, Iowa</p>
+  <p>(555) 417-9823</p>
+  <p>Mon–Fri: 8 AM – 6 PM</p>
 </section>
 
 <section class="section" id="services">
-  <h2>Our Services</h2>
+  <h2>Services</h2>
   <div class="services">
     <div class="card">Engine Diagnostics</div>
-    <div class="card">Diesel Engine Repair</div>
+    <div class="card">Diesel Repair</div>
     <div class="card">Fleet Maintenance</div>
-    <div class="card">Brake & Suspension</div>
-    <div class="card">Transmission Service</div>
-    <div class="card">Preventative Maintenance</div>
+    <div class="card">Brakes & Suspension</div>
+    <div class="card">Transmission</div>
+    <div class="card">Maintenance</div>
   </div>
 </section>
 
 <section class="section">
   <h2>Why Choose Us</h2>
   <ul>
-    <li>Experienced diesel technicians</li>
-    <li>Fast and reliable service</li>
+    <li>Certified techs</li>
+    <li>Fast turnaround</li>
     <li>Honest pricing</li>
-    <li>Quality workmanship</li>
   </ul>
 </section>
 
 <section class="section" id="contact">
-  <h2>Contact Us</h2>
-  <p>Phone: (555) 417-9823</p>
-  <p>Address: 1553 15th Ave SE, Dyersville, Iowa</p>
-  <p>Hours: Mon–Fri 8 AM – 6 PM</p>
+  <h2>Contact & Schedule</h2>
+  <div class="contact-container">
 
-  <h3>Schedule Service</h3>
-  <form>
-    <input type="text" placeholder="Name" required><br><br>
-    <input type="text" placeholder="Phone" required><br><br>
-    <input type="text" placeholder="Vehicle Type"><br><br>
-    <input type="date"><br><br>
-    <textarea placeholder="Service Needed"></textarea><br><br>
-    <button class="btn">Submit</button>
-  </form>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="text" name="phone" placeholder="Phone" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Service Needed"></textarea>
+      <button class="btn">Submit</button>
+    </form>
+
+    <iframe src="https://www.google.com/maps?q=1553+15th+Ave+SE+Dyersville+Iowa&output=embed"></iframe>
+
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Rockville Repair</p>
+  <p>© Rockville Repair</p>
 </footer>
 
 </body>
