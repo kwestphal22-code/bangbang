@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rockville Repair</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#111; color:#fff; }
+    header { background:#000; padding:20px; text-align:center; }
+    header h1 { margin:0; }
+    nav { margin-top:10px; }
+    nav a { color:#fff; margin:0 15px; text-decoration:none; }
+    .hero { padding:80px 20px; text-align:center; background:#222; }
+    .hero h2 { font-size:40px; }
+    .btn { display:inline-block; margin:10px; padding:12px 20px; background:#c62828; color:#fff; text-decoration:none; border-radius:5px; }
+    .section { padding:40px 20px; max-width:1000px; margin:auto; }
+    .services { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; }
+    .card { background:#1c1c1c; padding:20px; border-radius:10px; }
+    footer { background:#000; text-align:center; padding:20px; margin-top:40px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Rockville Repair</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Reliable Diesel Repair You Can Trust</h2>
+  <a href="tel:5554179823" class="btn">Call Now</a>
+  <a href="#contact" class="btn">Schedule Service</a>
+</section>
+
+<section class="section">
+  <h2>Quick Info</h2>
+  <p>📍 1553 15th Ave SE, Dyersville, Iowa</p>
+  <p>📞 (555) 417-9823</p>
+  <p>🕒 Mon–Fri: 8 AM – 6 PM</p>
+</section>
+
+<section class="section" id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">Engine Diagnostics</div>
+    <div class="card">Diesel Engine Repair</div>
+    <div class="card">Fleet Maintenance</div>
+    <div class="card">Brake & Suspension</div>
+    <div class="card">Transmission Service</div>
+    <div class="card">Preventative Maintenance</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Why Choose Us</h2>
+  <ul>
+    <li>Experienced diesel technicians</li>
+    <li>Fast and reliable service</li>
+    <li>Honest pricing</li>
+    <li>Quality workmanship</li>
+  </ul>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>Phone: (555) 417-9823</p>
+  <p>Address: 1553 15th Ave SE, Dyersville, Iowa</p>
+  <p>Hours: Mon–Fri 8 AM – 6 PM</p>
+
+  <h3>Schedule Service</h3>
+  <form>
+    <input type="text" placeholder="Name" required><br><br>
+    <input type="text" placeholder="Phone" required><br><br>
+    <input type="text" placeholder="Vehicle Type"><br><br>
+    <input type="date"><br><br>
+    <textarea placeholder="Service Needed"></textarea><br><br>
+    <button class="btn">Submit</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Rockville Repair</p>
+</footer>
+
+</body>
+</html>
